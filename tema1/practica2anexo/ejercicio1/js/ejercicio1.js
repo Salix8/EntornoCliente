@@ -2,7 +2,7 @@
 //Declaración de variables
 
 //Algoritmica
-function bienbenida() {
+function bienvenida() {
     alert("estas encima de un enlace!!!");
 }
 

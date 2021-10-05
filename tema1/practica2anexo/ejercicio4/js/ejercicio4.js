@@ -1,16 +1,23 @@
 
 //Declaración de variables
-var myWindow;
+let num = 0;
+let numRan = 0;
 
 //Algoritmia
+num = prompt(`Introduzca un numero del 1 al 10, por favor`);
 
-function openWin() {
-  myWindow = window.open("", "", "width=100, height=100"); //se abre una ventana al pulsar el botón
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function resizeWin() {
-  myWindow.resizeTo(500, 500); //se redimensiona al pulsar el otro botón
-  myWindow.focus(); //mantiene la ventana por delante
+numRan = getRandomInt(1, 11);
+
+if (num == numRan) {
+  alert(`Felicidades has acertado el numero.`);
+}else {
+  alert(`Vaya parece que no has acertado el numero.`);
 }
 
 //Visualización
+
+alert(`El numero aleatorio era ${numRan}.`);

@@ -1,17 +1,13 @@
 
 //Declaración de variables
-const fecha = new Date();
-const diaActual = fecha.getDate();
-const añoActual = fecha.getFullYear();
-
-var days = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
-var months = ['enero', 'febreo', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-var dayName = days[fecha.getDay()];
-var monthName = months[fecha.getMonth()];
+var nuevaVentana;
 
 
 //Algoritmia
-function fechaActual() {
-    alert(`Hoy estamos a ${dayName}, ${diaActual} de ${monthName} del ${añoActual}`);
+let crono = setTimeout(`bienvenida()`, 20000);
+
+function bienvenida() {
+    nuevaVentana=window.open(``, `pagina2`,`toolbar=yes,location=no,menubar=yes width=300,height=300` );
+    
 }
 //Visualización
