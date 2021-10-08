@@ -1,9 +1,7 @@
-
 //Declaración de variables
 
 
 //Algoritmica
-
 function validate_send(){
     if(document.formulario.nombre.value == "") {
         alert("Por favor indique su nombre");

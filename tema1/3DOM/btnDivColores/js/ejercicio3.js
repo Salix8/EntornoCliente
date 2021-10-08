@@ -1,16 +1,12 @@
 
 //Declaración de variables
-var divs = document.getElementsByTagName(`div`);
-const backgroundDiv = document.querySelector(`.backgroundDiv`);
-//Algoritmia
-/*
-function fondo(colores){
-    divs.forEach(element => {
-        element.style.backgroundColor = colores;
-    });
-}*/
 
-backgroundDiv.style.backgroundColor = `#f00`;
+//Algoritmia
+
+function fondo(colores){
+    let btn = document.getElementById('btn');
+    btn.style.backgroundColor = colores;
+}
 
 //Visualización
 
