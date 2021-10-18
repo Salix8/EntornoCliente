@@ -1,13 +1,17 @@
 
-//Declaración de variables
-var nuevaVentana;
+function cambiarAtt() {
+    const btn = document.querySelector(`.input`);
+    btn.setAttribute(`value`, `Esto no quedara asi`);
 
+    setTimeout(cambiartipo1,4000);
 
-//Algoritmia
-let crono = setTimeout(`bienvenida()`, 20000);
+    function cambiartipo1() {
+        btn.setAttribute(`type`, `button`);
+        setTimeout(cambiartipo2, 4000);
+    }
 
-function bienvenida() {
-    nuevaVentana=window.open(``, `pagina2`,`toolbar=yes,location=no,menubar=yes width=300,height=300` );
-    
+    function cambiartipo2() {
+        btn.setAttribute(`type`, `color`);
+    }
 }
-//Visualización
+
