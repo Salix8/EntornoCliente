@@ -1,8 +1,14 @@
 
 function cambiarAtt() {
-    let inputHTML = `<input class="input" type="text" value="">`;
-    document.body.innerHTML += inputHTML;
+    /*let inputHTML = `<input class="input" type="text" value="">`;
+    document.body.innerHTML += inputHTML;*/
 
+    let input = document.createElement(`input`);
+    input.setAttribute(`type`, `text`);
+    input.setAttribute(`class`, `input`);
+    input.setAttribute(`value`, `Esto no quedara asi`);
+    
+    document.body.appendChild(input);
 
     const btn = document.querySelector(`.input`);
     btn.setAttribute(`value`, `Esto no quedara asi`);
@@ -18,4 +24,3 @@ function cambiarAtt() {
         btn.setAttribute(`type`, `color`);
     }
 }
-
