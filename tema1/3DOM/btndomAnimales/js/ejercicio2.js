@@ -1,24 +1,20 @@
 function añadirParrafo() {
     let divInicial = document.getElementById(`listaelemen`);
-    let ul = document.createElement(`ul`);
     let li = document.createElement(`li`);
     let contenido = document.createTextNode(`Cocodrilo`);
     
     li.appendChild(contenido);
-    ul.appendChild(li);
-    divInicial.appendChild(ul);
+    divInicial.appendChild(li);
 }
 
 function insertarParrafo() {
     let divInicial = document.getElementById(`listaelemen`);
     let segundoElemento = divInicial.getElementsByTagName(`li`)[1];
-    let ul = document.createElement(`ul`);
     let li = document.createElement(`li`);
     let contenido = document.createTextNode(`Ballena`);
     
     li.appendChild(contenido);
-    ul.appendChild(li);
-    divInicial.insertBefore(ul, segundoElemento);
+    divInicial.insertBefore(li, segundoElemento);
 }
 
 function reemplazarParrafo() {
@@ -39,8 +35,8 @@ function borrarParrafo() {
 }
 
 function clonar() {
-    let divInicial = document.getElementById(`listaelemen`);
-    divInicial.cloneNode(true);
+    let divInicial = document.getElementById(`listaelemen`).cloneNode(true);
+    document.body.appendChild(divInicial);
 }
 
 function sublistaDOM() {
