@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Ejercicio 1 practica 5 PachecoSaul</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Autor" content="Saúl Pacheco Trilles" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--<link rel="stylesheet" type="text/css" href="estilo.css" />-->
+        <script src="js/ejercicio1.js"></script>
+	</head>
+	<body>
+		<style>
+			body{background-color: #00807f;}
+			#formulario{
+				display: flex; flex-direction: column; margin: 1% auto;
+			}
+
+				#formulario > h1{
+					text-align: center;
+				}
+
+				#formulario > div{
+					margin: 30px;
+				}
+		</style>
+        
+		<form id="formulario" action="#">
+            <h1>Menu Navideño</h1>
+			<div>
+				<label for="">ENTRANTES</label><br>
+				<input type="checkbox" name="checkbox" id="checkbox1" value="Ensalada especial" />
+				<label for="">Ensalada especial</label><br>
+				<input type="checkbox" name="checkbox" id="checkbox2" value="Jamon Iberico" />
+				<label for="">Jamon Iberico</label>
+			</div>
+			<div>
+				<label for="">SEGUNDO PLATO</label><br>
+				<input type="radio" name="radio" id="primerPlato" value="Pavo Trufado"><label for="Pavo Trufado">Pavo Trufado</label><br>
+				<input type="radio" name="radio" id="segundoPlato" value="Salmon al cava"><label for="Salmon al cava">Salmon al cava</label>
+			</div>
+			<div>
+				<input type="button" id="enviar" value="Menu Seleccionado" name="enviar" />
+				<input type="reset" id="reset" value="Nuevo Menú" />
+			</div>
+		</form>
+	</body>
+</html>
