@@ -1,7 +1,7 @@
 window.addEventListener(`load`, ()=>{
 
     document.getElementById(`contenedor`).addEventListener(`click`, ()=> {
-        sacarDatos(datos);
+        sacarDatos(`datos.txt`);
     });
 
     var XMLHttpRequestObject = false;
