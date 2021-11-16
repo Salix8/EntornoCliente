@@ -1,5 +1,8 @@
-window.onload = function() {
+window.addEventListener(`load`, ()=>{
 
+    document.getElementById(`contenedor`).addEventListener(`click`, ()=> {
+        sacarDatos(datos);
+    });
 
     var XMLHttpRequestObject = false;
 
@@ -8,13 +11,12 @@ window.onload = function() {
     } else if (window.ActiveXObject) {
         XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
     }
+});
 
-    
-}
 
-function sacarDatos(datos, idDiv){
+function sacarDatos(datos){
     if(XMLHttpRequestObject) {
-        var objeto = document.getElementById(idDiv);
+        var objeto = document.getElementById(`contenedor`);
         XMLHttpRequestObject.open("GET", datos);
         XMLHttpRequestObject.onreadystatechange = function(){
             if (XMLHttpRequestObject.readyState == 4 &&                   
