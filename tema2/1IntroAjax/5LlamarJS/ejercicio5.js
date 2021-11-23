@@ -8,9 +8,10 @@ window.addEventListener(`load`, ()=>{
         XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
     }
 
-    document.getElementById(`inicio`).addEventListener(`click`, ()=> {
-        sacarDatos(`inicio.html`, XMLHttpRequestObject);
-    });    
+    document.getElementById(`btnMostrar`).addEventListener(`click`, ()=> {
+        sacarDatos(`script.js`, XMLHttpRequestObject);
+    });
+
 });
 
 
@@ -20,7 +21,7 @@ function sacarDatos(datos, XMLHttpRequestObject){
         XMLHttpRequestObject.open("GET", datos);
         XMLHttpRequestObject.onreadystatechange = function(){
             if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
-                objeto.innerHTML = XMLHttpRequestObject.responseText;
+                objeto = eval(XMLHttpRequestObject.responseText);
             }
         }
     } 
