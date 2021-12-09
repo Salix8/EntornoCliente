@@ -1,4 +1,4 @@
-window.addEventListener(`load`, ()=>{
+firstChildwindow.addEventListener(`load`, ()=>{
 
     let XMLHttpRequestObject = false;
     
