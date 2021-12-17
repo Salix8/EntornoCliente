@@ -14,7 +14,7 @@
     $stmt->bind_result($id, $nombre, $lv, $hp, $ca, $pb, $dice, $fuerza, $destreza, $constitucion, $inteligencia, $sabiduria, $carisma);
     $stmt->fetch();
     $stmt->close();
-    
+
     echo "<table>";
     echo "<tr>";
     echo "<th>id</th>";
@@ -45,4 +45,3 @@
     echo "<td>" . $carisma . "</td>";
     echo "</tr>";
     echo "</table>";
-?>

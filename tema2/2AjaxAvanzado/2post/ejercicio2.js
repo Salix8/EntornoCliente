@@ -14,6 +14,6 @@ function showCustomer(str) {
     xhttp.onload = function() {
       document.getElementById("txtHint").innerHTML = this.responseText;
     }
-    xhttp.open("GET", "script.php?q="+str);
+    xhttp.open("POST", "script.php?q="+str);
     xhttp.send();
 }
