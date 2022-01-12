@@ -1,5 +1,7 @@
 <?php
 
-    echo $_GET["nombre"];
+    echo $_POST["nombre"];
 
-    echo $_GET["apellidos"];
+    echo $_POST["apellidos"];
+
+    
