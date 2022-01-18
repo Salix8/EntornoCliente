@@ -1,5 +1,4 @@
 $(document).ready(()=>{
-    alert("Hola estoy bien linqueado")
 
     $("#btn").click(()=>{
 

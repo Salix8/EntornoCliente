@@ -1,13 +1,10 @@
-$(document).ready(()=>{
-    
-    var str = $( "form" ).serialize();
-    $( "#results" ).text( str );
+$(document).ready(function () {
 
-    $("#btn").click(()=>{
-        $.get( "script.php", {usuario: "pepe", clave: "hola"}).done(function(data) {        
-            
-            
-        })
+    $("#btn").on("click", () => {
+
+    $.get( "script.php", $("form").serialize(), (response) => $("#results").html(response))
+     .fail((request) => $("#results").html(request.status));
+
     });
 
-})
+});
