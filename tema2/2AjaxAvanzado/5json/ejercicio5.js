@@ -18,7 +18,7 @@ function comprobar() {
     peticion_http.open("POST", "script.php", true);
 
     peticion_http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    peticion_http.send("login="+login+"&nocache="+Math.random());
+    peticion_http.send(`login=${login}&nocache=${Math.random()}`);
   }
 }
 
@@ -30,10 +30,10 @@ function procesaRespuesta() {
       var respuesta = eval("("+respuesta_json+")");
 
       if(respuesta.disponible == "si") {
-        document.getElementById("disponibilidad").innerHTML = "El nombre elegido ["+login+"] está disponible";
+        document.getElementById("disponibilidad").innerHTML = `El nombre elegido [${login}] está disponible`;
       }
       else {
-        var mensaje = "NO está disponible el nombre elegido ["+login+"]. Puedes probar con las siguientes alternativas.";
+        var mensaje = `NO está disponible el nombre elegido [${login}]. Puedes probar con las siguientes alternativas.`;
         mensaje += "<ul>";
         for(var i in respuesta.alternativas) {
           mensaje += "<li><a href=\"#\" onclick=\"selecciona('"+respuesta.alternativas[i]+"'); return false\">"+respuesta.alternativas[i]+"<\/a><\/li>";
